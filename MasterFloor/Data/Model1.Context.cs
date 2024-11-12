@@ -15,18 +15,18 @@ namespace MasterFloor.Data
     
     public partial class MasterPolEntities : DbContext
     {
-        private static MasterPolEntities _contxet;
+        private static MasterPolEntities _context;
         public MasterPolEntities()
             : base("name=MasterPolEntities")
         {
         }
         public static MasterPolEntities GetContext()
         {
-            if (_contxet == null)
+            if (_context == null)
             {
-                _contxet = new MasterPolEntities();
+                _context = new MasterPolEntities();
             }
-            return _contxet;
+            return _context;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
