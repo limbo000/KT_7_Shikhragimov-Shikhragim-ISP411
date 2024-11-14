@@ -14,15 +14,10 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="70"></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0"
-              HorizontalAlignment="Center"
+
+        <Grid Grid.Row="0" HorizontalAlignment="Center"
               VerticalAlignment="Center">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"></ColumnDefinition>
-                <ColumnDefinition Width="250"></ColumnDefinition>
-                <ColumnDefinition Width="200"></ColumnDefinition>
-                <ColumnDefinition Width="250"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
+
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -30,42 +25,45 @@
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
 
-            <Label x:Name="IdLabel" Content="Id:" Grid.Row="0"
-                   Grid.Column="0"></Label>
-            <Label Content="Наименование партнера:" Grid.Row="1"
-                   Grid.Column="0"></Label>
-            <Label Content="Тип партнера:" Grid.Row="2"
-                   Grid.Column="0"></Label>
-            <Label Content="Рейтинг:" Grid.Row="3"
-                   Grid.Column="0"></Label>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="300"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="300"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
 
-            <Label Content="Адрес:" Grid.Row="0"
-                   Grid.Column="2"></Label>
-            <Label Content="ФИО директора:" Grid.Row="1"
-                   Grid.Column="2"></Label>
-            <Label Content="Телефон:" Grid.Row="2"
-                   Grid.Column="2"></Label>
-            <Label Content="Email компании:" Grid.Row="3"
-                   Grid.Column="2"></Label>
+            <Label x:Name="IdLabel" Content="Id:" 
+                   Grid.Row="0" Grid.Column="0"></Label>
+            <Label Content="Наименование:" Grid.Row="1" Grid.Column="0"></Label>
+            <Label Content="Тип партнера" Grid.Row="2" Grid.Column="0"></Label>
+            <Label Content="Рейтинг:" Grid.Row="3" Grid.Column="0"></Label>
+
+            <Label Content="Адрес:" Grid.Row="0" Grid.Column="2"></Label>
+            <Label Content="ФИО директора:" Grid.Row="1" Grid.Column="2"></Label>
+            <Label Content="Телефон:" Grid.Row="2" Grid.Column="2"></Label>
+            <Label Content="Email:" Grid.Row="3" Grid.Column="2"></Label>
 
             <TextBox x:Name="IdTextBox" Grid.Row="0" Grid.Column="1"
-                     IsEnabled="False" IsReadOnly="False"></TextBox>
+                     IsEnabled="False" IsReadOnly="True"></TextBox>
             <TextBox x:Name="NameTextBox" Grid.Row="1" Grid.Column="1"></TextBox>
-            <ComboBox x:Name="TypeTextBox" Grid.Row="2" Grid.Column="1"></ComboBox>
+            <ComboBox x:Name="TypeComboBox" Grid.Row="2" Grid.Column="1"
+                      DisplayMemberPath="TypeOfPartner1"></ComboBox>
             <TextBox x:Name="RatingTextBox" Grid.Row="3" Grid.Column="1"></TextBox>
 
             <TextBox x:Name="AdressTextBox" Grid.Row="0" Grid.Column="3"></TextBox>
             <TextBox x:Name="FIOTextBox" Grid.Row="1" Grid.Column="3"></TextBox>
             <TextBox x:Name="PhoneTextBox" Grid.Row="2" Grid.Column="3"></TextBox>
             <TextBox x:Name="EmailTextBox" Grid.Row="3" Grid.Column="3"></TextBox>
+
         </Grid>
-        <Button Grid.Row="1" Content="Назад" 
-                Click="Button_Click"
-                HorizontalAlignment="Left"
-                Margin="10"></Button>
-        <Button x:Name="SaveButton" Grid.Row="1" 
-                Content="Сохранить" Click="SaveButton_Click"
-                HorizontalAlignment="Right"
-                Margin="10"></Button>
+
+        <Button x:Name="BackButton" Grid.Row="1"
+                Content="Назад" HorizontalAlignment="Left"
+                Margin="10"
+                Click="BackButton_Click"></Button>
+        <Button x:Name="SaveButton" Grid.Row="1"
+                Content="Сохранить" HorizontalAlignment="Right"
+                Margin="10"
+                Click="SaveButton_Click"></Button>
     </Grid>
 </Page>

@@ -19,7 +19,9 @@
                   CanUserAddRows="False"
                   CanUserDeleteRows="False"
                   HorizontalAlignment="Center"
-                  VerticalAlignment="Center">
+                  VerticalAlignment="Center"
+                  BorderBrush="Black"
+                  BorderThickness="1">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Наименование продукции" 
                     Binding="{Binding Production.NameOfProduction}"></DataGridTextColumn>

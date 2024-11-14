@@ -17,7 +17,9 @@
 
         <ListView x:Name="MasterListView" 
                   VerticalAlignment="Center" 
-                  HorizontalAlignment="Center">
+                  HorizontalAlignment="Center"
+                  BorderBrush="Black"
+                  BorderThickness="1">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -29,7 +31,7 @@
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Grid.Column="0" VerticalAlignment="Center">
-                            <TextBlock>
+                            <TextBlock FontWeight="Bold">
                                 <Run Text="{Binding Partner.TypeOfPartner.TypeOfPartner1}"/>
                                 <Run Text="|"/>
                                 <Run Text="{Binding Partner.PartnerName.Name}"/>

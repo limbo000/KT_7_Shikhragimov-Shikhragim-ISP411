@@ -58,13 +58,13 @@ namespace MasterFloor.Pages
             if (partnerData != null)
             {
                 var partner = (partnerData as dynamic).Partner;
-                Classes.Manager.MainFrame.Navigate(new Pages.AddEditPage());
+                Classes.Manager.MainFrame.Navigate(new Pages.AddEditPage(partner));
             }
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            Classes.Manager.MainFrame.Navigate(new Pages.AddEditPage());
+            Classes.Manager.MainFrame.Navigate(new Pages.AddEditPage(null));
         }
 
         private void HistoryButton_Click(object sender, RoutedEventArgs e)
